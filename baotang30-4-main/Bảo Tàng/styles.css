@@ -7,7 +7,7 @@
 
 body {
   font-family: "Playfair", sans-serif;
-  background-color: #FAE4D9;
+  background-color: #fae4d9;
   color: #333;
   line-height: 1.6;
   margin: 0;
@@ -69,11 +69,12 @@ a {
 
 #content {
   padding: 20px;
-  height: calc(100dvh - 5em - 7em);
-  max-height: calc(100dvh - 5em - 7em);
+  height: calc(100dvh - 5em);
+  max-height: calc(100dvh - 5em);
   overflow: auto;
   display: flex;
   flex-direction: column;
+  padding-bottom: 7em;
 }
 
 .content__title {
@@ -94,14 +95,16 @@ a {
 
 .content__para1 {
   flex: 1 1 max(calc(50% - 1.5em), 600px);
+  /* word-break: break-all; */
 }
 
 .content__para2 {
   flex: 1 1 max(calc(50% - 1.5em), 600px);
+  /* word-break: break-all; */
 }
 
 .content__para--image {
-  width: min(100%, 40em);
+  width: min(90%, 40em);
   height: auto;
   margin: 15px;
   border-radius: 10px;
@@ -110,7 +113,6 @@ a {
 .description-text1 {
   text-align: justify;
   margin-top: 20px;
-  
 }
 
 .description-text2 {
@@ -128,6 +130,25 @@ a {
   margin-bottom: 15px;
 }
 
+#slider img {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: center center;
+  -webkit-user-select: none;
+  user-select: none;
+  border-radius: 1.5rem;
+}
+
+#slider {
+  display: flex;
+  gap: 4vmin;
+  position: relative;
+  left: 10%;
+  top: 25%;
+  transform: translate(0%, -50%);
+}
+
 #footer {
   position: absolute; /* Position absolute to stick to the bottom */
   bottom: 0; /* Align to the bottom */
@@ -138,7 +159,7 @@ a {
   padding: 0.5em 1em;
   color: #f4f4f4;
 }
-.footer-nav {
+/* .footer-nav {
   display: flex;
   justify-content: center;
   gap: 2em;
@@ -152,8 +173,34 @@ a {
   align-items: center;
   color: #f4f4f4;
   text-transform: uppercase;
-}
+} */
 
 .footer-noti {
   padding: 0.2em;
+}
+
+.carousel {
+  background: #eee;
+}
+
+.carousel-cell {
+  width: 66%;
+  height: 400px;
+  margin-right: 10px;
+  background: #8c8;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+.img-carousel {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.heading-3 {
+  margin-top: 1em;
+  padding: 0.5em 0;
+  text-align: center;
+  border-top: 3px groove #333;
 }
